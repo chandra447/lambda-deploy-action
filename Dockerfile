@@ -2,19 +2,19 @@
 FROM ghcr.io/chandra447/lambda-deploy:v1.2
 
 #Set AWS credentials
-ARG AWS_ACCESS_KEY_ID
-ARG AWS_SECRET_ACCESS_KEY
-ARG AWS_region
+ARG aws_access_key_id
+ARG aws_secret_access_key
+ARG aws_region
 
-ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+ENV AWS_ACCESS_KEY_ID=$aws_access_key_id
+ENV AWS_SECRET_ACCESS_KEY=$aws_secret_access_key
 ENV filenameordirectory deployment.py
 ENV functionName test
 
 #configure awscli with the passed in credentials
-RUN aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID} && \
-    aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY} && \
-    aws configure set region ${AWS_region}
+RUN aws configure set aws_access_key_id ${aws_access_key_id} && \
+    aws configure set aws_secret_access_key ${aws_secret_access_key} && \
+    aws configure set region ${aws_region}
 
 # Copy the file which has to used
 COPY entrypoint.sh /entrypoint.sh

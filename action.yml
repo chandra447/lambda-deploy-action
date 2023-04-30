@@ -1,6 +1,6 @@
 name: 'AWS Lambda Deploy'
 description: 'Deploying Lambda code to an existing function'
-author: 'Bo-Yi Wu'
+author: 'chandra'
 inputs:
   aws_region:
     description: 'AWS Region'
