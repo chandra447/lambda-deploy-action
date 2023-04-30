@@ -9,7 +9,9 @@ inputs:
   aws_secret_access_key:
     description: 'AWS SECRET KEY'
   source:
-    description: 'zip file list'
+    description: 'zip file list' 
+  function_name:
+    description: 'AWS lambda function name'
   
 runs:
   using: 'docker'
