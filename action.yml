@@ -1,0 +1,20 @@
+name: 'AWS Lambda Deploy'
+description: 'Deploying Lambda code to an existing function'
+author: 'Bo-Yi Wu'
+inputs:
+  aws_region:
+    description: 'AWS Region'
+  aws_access_key_id:
+    description: 'AWS ACCESS KEY'
+  aws_secret_access_key:
+    description: 'AWS SECRET KEY'
+  source:
+    description: 'zip file list'
+  
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'layers'
+  color: 'gray-dark'
