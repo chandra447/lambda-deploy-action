@@ -1,5 +1,5 @@
 #change this to yout image
-FROM ghcr.io/chandra447/lambda-deploy:v1.2
+FROM ghcr.io/chandra447/lambda-deploy:latest
 
 #Set AWS credentials
 ARG aws_access_key_id
